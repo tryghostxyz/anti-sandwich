@@ -1,0 +1,15 @@
+[package]
+name = "anti-sandwich-program"
+version = "0.1.0"
+authors = ["George Datskos"]
+license = "GPL-2.0-or-later"
+edition = "2021"
+
+[lib]
+crate-type = ["lib", "cdylib"]
+
+[dependencies]
+anti-sandwich-common = { path = "../common" }
+pinocchio = { workspace = true }
+pinocchio-pubkey = { workspace = true }
+pinocchio-log = { workspace = true }

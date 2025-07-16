@@ -1,0 +1,11 @@
+[package]
+name = "anti-sandwich-sdk"
+version = "0.1.0"
+edition = "2021"
+authors = ["George Datskos"]
+license = "MIT or Apache-2.0"
+
+[dependencies]
+eyre = { workspace = true }
+solana-program = { workspace = true }
+anti-sandwich-common = { path = "../common" }

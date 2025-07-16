@@ -1,0 +1,18 @@
+[package]
+name = "abort-example"
+version = "0.1.0"
+authors = ["George Datskos"]
+license = "MIT or Apache-2.0"
+edition = "2021"
+
+[dependencies]
+eyre = { workspace = true }
+solana-program = { workspace = true }
+solana-keypair = { workspace = true }
+solana-signer = { workspace = true }
+solana-instruction = { workspace = true }
+solana-transaction = { workspace = true }
+solana-transaction-error = { workspace = true }
+litesvm = { workspace = true }
+anti-sandwich-sdk = { path = "../../sdk" }
+

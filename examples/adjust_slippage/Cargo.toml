@@ -1,0 +1,25 @@
+[package]
+name = "adjust-slippage-example"
+version = "0.1.0"
+authors = ["George Datskos"]
+license = "MIT or Apache-2.0"
+edition = "2021"
+
+[dependencies]
+eyre = { workspace = true }
+solana-account = { workspace = true }
+solana-program = { workspace = true }
+solana-keypair = { workspace = true }
+solana-signer = { workspace = true }
+solana-instruction = { workspace = true }
+solana-transaction = { workspace = true }
+spl-associated-token-account = { workspace = true }
+spl-token = { workspace = true }
+litesvm = { workspace = true }
+anti-sandwich-sdk = { path = "../../sdk" }
+
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true }
+
+jupiter-swap-api-client = { git = "https://github.com/jup-ag/jupiter-swap-api-client.git", package = "jupiter-swap-api-client" }

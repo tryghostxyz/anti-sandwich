@@ -1,0 +1,11 @@
+[package]
+name = "anti-sandwich-common"
+version = "0.1.0"
+authors = ["George Datskos"]
+license = "GPL-2.0-or-later"
+edition = "2021"
+
+[lib]
+
+[dev-dependencies]
+proptest = "1.4"
