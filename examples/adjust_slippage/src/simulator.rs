@@ -70,12 +70,11 @@ impl Simulator {
                 self.svm.send_transaction(tx)
             }
             Some(lookup_tables) => {
-                // ALT account data already assumed stored in .fetch_and_add_accounts
                 let lookup_tables = self.get_all_lookup_tables(lookup_tables)?;
 
                 let msg = VersionedMessage::V0(v0::Message::try_compile(
                     &signer.pubkey(),
-                    &ixs,
+                    ixs,
                     &lookup_tables,
                     self.svm.latest_blockhash(),
                 )?);
@@ -100,7 +99,7 @@ impl Simulator {
                 .get_account(key)
                 .ok_or(eyre::eyre!("ALT {} not found in account states", key))?;
             if let Ok(lookup_table) = AddressLookupTable::deserialize(&account.data) {
-                if lookup_table.addresses.len() > 0 {
+                if !lookup_table.addresses.is_empty() {
                     lookup_tables.push(AddressLookupTableAccount {
                         key: *key,
                         addresses: lookup_table.addresses.into_owned(),

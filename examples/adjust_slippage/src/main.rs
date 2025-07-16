@@ -69,7 +69,7 @@ async fn run_single(sim_lands_on_nefarious: bool) -> eyre::Result<()> {
             println!("CUs: {}", meta.compute_units_consumed);
             for log in meta.logs {
                 if log.contains("adjusting") {
-                    println!("--> {}", log);
+                    println!("--> {log}");
                 }
             }
         }
@@ -78,7 +78,7 @@ async fn run_single(sim_lands_on_nefarious: bool) -> eyre::Result<()> {
             println!("CUs: {}", err.meta.compute_units_consumed);
             for log in err.meta.logs {
                 if log.contains("adjusting") {
-                    println!("--> {}", log);
+                    println!("--> {log}");
                 }
             }
             if sim_lands_on_nefarious {

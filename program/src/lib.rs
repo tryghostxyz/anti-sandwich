@@ -33,11 +33,11 @@ fn process_instruction(
         instruction_data.split_first().ok_or(ProgramError::InvalidInstructionData)?;
 
     match *discriminator {
-        ABORT_IF_NEFARIOUS_DISC => process_abort_if_nefarious(&data),
+        ABORT_IF_NEFARIOUS_DISC => process_abort_if_nefarious(data),
 
-        ADJUST_SLIPPAGE_VIA_JUPITER_DISC => process_adjust_slippage_and_forward(accounts, &data),
+        ADJUST_SLIPPAGE_VIA_JUPITER_DISC => process_adjust_slippage_and_forward(accounts, data),
 
-        REPORT_IF_NEFARIOUS_DISC => process_report_if_nefarious(&data),
+        REPORT_IF_NEFARIOUS_DISC => process_report_if_nefarious(data),
 
         _ => Err(ProgramError::InvalidInstructionData),
     }

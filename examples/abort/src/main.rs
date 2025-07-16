@@ -78,7 +78,7 @@ fn run(svm: &mut LiteSVM, ix: &Instruction, slot: u64, expect_abort: bool) -> ey
 fn custom_err_str(meta: &FailedTransactionMetadata) -> String {
     match meta.err {
         TransactionError::InstructionError(_, InstructionError::Custom(v)) => {
-            format!("{}", v)
+            format!("{v}")
         }
         _ => meta.err.to_string(),
     }
