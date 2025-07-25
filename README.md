@@ -141,7 +141,3 @@ Yes. *This code is being provided as is. No guarantee, representation or warrant
 ## License
 
 [Add your license information here]
-
-## Contributing
-
-[Add contributing guidelines here]
