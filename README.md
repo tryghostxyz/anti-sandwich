@@ -140,4 +140,7 @@ Yes. *This code is being provided as is. No guarantee, representation or warrant
 
 ## License
 
-[Add your license information here]
+This project uses multiple licenses:
+
+- `sdk` and `examples` crates: MIT and Apache-2.0 licensed
+- `common` and `program` crates: GPL-licensed
